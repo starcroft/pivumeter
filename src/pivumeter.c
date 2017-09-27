@@ -277,6 +277,13 @@ int set_output_device(const char *output_device_name){
         return 0;
     }
 #endif
+#ifdef WITH_DEVICE_WS281X
+    if(strcmp(output_device_name, "ws281x") == 0){
+        fprintf(stderr, "Using device: ws281x\n");
+        output_device = ws281x();
+        return 0;
+    }
+#endif
     return -1;
 }
 

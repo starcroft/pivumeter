@@ -13,5 +13,5 @@ AC_CHECK_LIB([wiringPi], [wiringPiSetup], , [AC_MSG_ERROR(You need libwiringPi i
 AC_CHECK_LIB([asound], [snd_pcm_open], , [AC_MSG_ERROR(You need libasound installed)], )
 AC_CHECK_LIB([fftw3], [fftw_plan_dft_r2c_1d], , [AC_MSG_ERROR(You need libfftw3 installed)], )
 AC_CHECK_LIB([m], [log])
-
+AC_CHECK_LIB([ws2811], [ws2811_init], , [AC_MSG_ERROR(You need libws2811 installed)], )
 AC_OUTPUT(Makefile)
